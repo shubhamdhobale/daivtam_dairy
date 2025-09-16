@@ -22,7 +22,7 @@ export default function About() {
           className="rounded-3xl overflow-hidden shadow-xl"
         >
           <img
-            src="/images/farm-cows.jpg"
+            src="/about/image.png"
             alt="Our Dairy Farm"
             className="w-full h-[400px] object-cover"
           />

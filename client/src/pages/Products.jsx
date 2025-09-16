@@ -5,11 +5,11 @@ export default function Products() {
   const navigate = useNavigate();
 
   const products = [
-    { name: "Fresh Cow Milk", img: "/images/milk.png", desc: "Pure, fresh cow milk from our farm.", size: "500ml / 1L" },
-    { name: "Paneer", img: "/images/paneer.png", desc: "Soft, fresh paneer – perfect for cooking.", size: "200g / 500g" },
-    { name: "Curd", img: "/images/curd.png", desc: "Thick and creamy homemade-style curd.", size: "500ml / 1L" },
-    { name: "Ghee", img: "/images/ghee.png", desc: "Traditional desi ghee with rich aroma.", size: "250g / 500g" },
-    { name: "Butter", img: "/images/butter.png", desc: "Smooth, delicious butter made from pure milk.", size: "200g / 500g" },
+    { name: "Fresh Cow Milk", img: "/products/cowmilk.png", desc: "Pure, fresh cow milk from our farm.", size: "500ml / 1L" },
+    { name: "Paneer", img: "/products/paneer.png", desc: "Soft, fresh paneer – perfect for cooking.", size: "200g / 500g" },
+    { name: "Curd", img: "/products/curd.png", desc: "Thick and creamy homemade-style curd.", size: "500ml / 1L" },
+    { name: "Ghee", img: "/products/ghee.png", desc: "Traditional desi ghee with rich aroma.", size: "250g / 500g" },
+    { name: "Butter", img: "/products/butter.png", desc: "Smooth, delicious butter made from pure milk.", size: "200g / 500g" },
   ];
 
   const handleEnquiry = (productName) => {

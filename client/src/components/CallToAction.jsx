@@ -5,7 +5,6 @@ import { FaWhatsapp, FaEnvelope } from "react-icons/fa";
 const CallToAction = () => {
   return (
     <section className="relative w-full bg-gradient-to-t from-[#0077B6] to-[#74C69D] py-20 overflow-hidden">
-      {/* Decorative Milk Splash Illustration (optional PNG/SVG) */}
       <img
         src="/decor/milk-splash.png"
         alt="Milk Splash"
@@ -22,7 +21,7 @@ const CallToAction = () => {
         initial={{ opacity: 0, y: 60 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
-        className="relative z-10 max-w-4xl mx-auto text-center text-white px-6"
+        className="relative z-9 max-w-4xl mx-auto text-center text-white px-6"
       >
         <h2 className="text-4xl md:text-5xl font-extrabold mb-6 drop-shadow-lg">
           Join the <span className="text-[#FFD166]">Daivatam Dairy</span> Family

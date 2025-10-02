@@ -41,13 +41,14 @@ function Hero() {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 800,
+    speed: 400,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
     arrows: false,
     fade: true,
+    pauseOnHover: false,
   };
 
   return (

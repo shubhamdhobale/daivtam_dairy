@@ -12,43 +12,67 @@ export default function Products() {
     { name: "Butter", img: "/products/butter.png", desc: "Smooth, delicious butter made from pure milk.", size: "200g / 500g" },
   ];
 
-  const handleEnquiry = (productName) => {
-    navigate(`/contact?product=${encodeURIComponent(productName)}`);
-  };
+  
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-green-50 to-green-100">
+    <div className="min-h-screen bg-gradient-to-b from-green-50 to-green-100 pt-20">
       {/* Hero Section */}
-      <section className="text-center py-16 bg-[url('/images/dairy-bg.jpg')] bg-cover bg-center relative">
+      <section className="text-center py-20 bg-[url('/hero-section-image/m2.jpg')] bg-cover bg-center relative">
         <div className="absolute inset-0 bg-black/40"></div>
-        <h1 className="relative text-white text-5xl font-bold drop-shadow-lg">
-          Our Fresh Dairy Products
-        </h1>
-        <p className="relative text-white/80 mt-4 text-lg">
-          Pure • Fresh • Hygienic • Farm-to-Table
-        </p>
+        <div className="relative z-10">
+          <h1 className="text-white text-5xl font-extrabold drop-shadow-lg">
+            Our <span className="text-green-300">Fresh Dairy</span> Products
+          </h1>
+          <div className="w-24 h-1 bg-green-400 mx-auto mt-4 rounded-full"></div>
+          <p className="text-white/80 mt-6 text-lg max-w-2xl mx-auto">
+            Pure • Fresh • Hygienic • Farm-to-Table goodness crafted with love from our village.
+          </p>
+        </div>
       </section>
 
-      {/* Products Grid */}
-      <section className="max-w-7xl mx-auto px-6 py-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-        {products.map((product, index) => (
-          <motion.div
-            key={index}
-            whileHover={{ scale: 1.05 }}
-            className="bg-white/50 backdrop-blur-xl rounded-2xl shadow-xl p-6 text-center transform transition-all duration-300 hover:shadow-2xl"
-          >
-            <img src={product.img} alt={product.name} className="h-40 mx-auto object-contain drop-shadow-lg" />
-            <h3 className="text-xl font-semibold mt-4">{product.name}</h3>
-            <p className="text-gray-600 mt-2">{product.desc}</p>
-            <p className="text-green-700 font-medium mt-2">Available: {product.size}</p>
-            <button
-              onClick={() => handleEnquiry(product.name)}
-              className="mt-4 px-6 py-2 bg-green-600 text-white rounded-full shadow-lg hover:bg-green-700 transition"
+      {/* Horizontal Cards Section */}
+      <section className="max-w-6xl mx-auto px-6 py-20 space-y-20">
+        {products.map((product, index) => {
+          const isReversed = index % 2 === 1;
+          return (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: isReversed ? 150 : -150 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.2, ease: "easeOut" }}
+              viewport={{ once: true }}
+              className={`flex flex-col md:flex-row items-center rounded-3xl bg-white/40 backdrop-blur-md shadow-lg overflow-hidden border border-green-200 hover:shadow-2xl hover:scale-[1.02] transition-all duration-500 ${
+                isReversed ? "md:flex-row-reverse" : ""
+              }`}
             >
-              Enquire Now
-            </button>
-          </motion.div>
-        ))}
+              {/* Product Image */}
+              <div className="md:w-1/2 w-full flex justify-center bg-gradient-to-br from-green-100 to-green-50 p-8">
+                <img
+                  src={product.img}
+                  alt={product.name}
+                  className="h-64 object-contain drop-shadow-lg transition-transform duration-500 hover:scale-105"
+                />
+              </div>
+
+              {/* Product Info */}
+              <div className="md:w-1/2 w-full p-10 text-center md:text-left">
+                <h3 className="text-3xl font-bold text-green-800 tracking-wide">
+                  {product.name}
+                </h3>
+                <p className="text-gray-700 mt-4 leading-relaxed">{product.desc}</p>
+                <p className="text-green-700 font-medium mt-3 text-lg">
+                  Available Sizes: <span className="font-semibold">{product.size}</span>
+                </p>
+                <button
+                  onClick={() => navigate("/contact")}
+                  className="mt-6 px-8 py-3 rounded-full bg-gradient-to-r from-green-600 to-green-700 text-white font-semibold shadow-md hover:shadow-green-500/50 hover:scale-105 transition duration-300"
+                >
+                  Enquire Now
+                </button>
+              </div>
+            </motion.div>
+          );
+        })}
       </section>
     </div>
   );

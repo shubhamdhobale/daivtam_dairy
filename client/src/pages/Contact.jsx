@@ -18,7 +18,7 @@ const Contact = () => {
   }, [location.search]);
 
   return (
-    <div className="bg-[#FFF9F1] min-h-screen pb-16">
+    <div className="bg-[#FFF9F1] min-h-screen pb-16 pt-20">
 
   {/* Contact Form Section with Background */}
   <div className="relative w-full overflow-hidden h-[calc(100vh-80px)] shadow-2xl flex items-center justify-center">
@@ -109,10 +109,10 @@ const Contact = () => {
     <h3 className="text-2xl font-bold text-[#0077B6]">Contact Information</h3>
     <div className="flex flex-col md:flex-row justify-center items-center mt-4 space-y-4 md:space-y-0 md:space-x-12">
       <p className="flex items-center gap-2 text-lg">
-        <FaPhone className="text-green-600" /> +91 98765 43210
+        <FaPhone className="text-green-600" /> +91 95520 03530
       </p>
       <p className="flex items-center gap-2 text-lg">
-        <FaEnvelope className="text-yellow-500" /> daivatamdairy@gmail.com
+        <FaEnvelope className="text-yellow-500" /> navnathdsk@gmail.com
       </p>
     </div>
   </motion.div>

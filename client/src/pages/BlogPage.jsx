@@ -30,7 +30,7 @@ const blogs = [
 
 const BlogPage = () => {
   return (
-    <div className="bg-[#FFF9F1] min-h-screen pt-24 pb-16 px-6 md:px-16">
+    <div className="bg-[#FFF9F1] min-h-screen pt-24 pb-16 px-6 md:px-16 pt-20">
       {/* Hero Section */}
       <div className="relative bg-gradient-to-r from-[#74C69D] to-[#0077B6] text-white rounded-3xl shadow-lg p-10 md:p-16 mb-16 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">Our Blog</h1>

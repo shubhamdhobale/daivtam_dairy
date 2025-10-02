@@ -71,11 +71,11 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Phone size={18} className="text-green-600" />
-                +91 98765 43210
+                +91 95520 03530
               </li>
               <li className="flex items-center gap-2">
                 <Mail size={18} className="text-green-600" />
-                info@anjaniagro.com
+                navnathdsk@gmail.com
               </li>
             </ul>
 

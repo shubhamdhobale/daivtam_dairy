@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-[#FFF9F1]">
+    <div className="min-h-screen bg-[#FFF9F1] pt-20">
       {/* Hero */}
       <section className="relative text-center py-16 bg-[url('/images/dairy-bg.jpg')] bg-cover bg-center">
         <div className="absolute inset-0 bg-black/40"></div>
